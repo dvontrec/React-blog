@@ -12,7 +12,7 @@ export default function (state = {}, action)
 		case FETCH_POSTS:
 			//used lodash to return an object that contains an array of posts as objects seperated by ID and content
 			return _.mapKeys(action.payload.data, 'id');
-		case DELETE_POST
+		case DELETE_POST:
 			//if state contains the deleted ID return new state with the key removed
 			return _.omit(state, action.payload);
 
